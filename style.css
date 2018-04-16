@@ -1,0 +1,321 @@
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+    background:#2d2b2e;
+    padding: 2%;
+    font-family: 'Betty-Noir', sans-serif;
+    font-size: 25px;
+    color: #322c20;
+    line-height: 26px;
+    text-align: justify;
+}
+
+@font-face{
+    font-family: "Betty-Noir";
+    src: url('fonts/bettynoir.ttf'),
+    url('fonts/bettynoir.ttf') format('truetype');
+}
+
+/*-----------------VIDEO-----------------*/
+
+.VTEC_video { 
+position: relative; 
+overflow: hidden;
+    
+/*----Note: this percentage figure comes from a 16:9 ratio
+    eg. 9/16 = 0.5625-----------------*/
+ padding-bottom: 56.25%; 
+}
+
+.VTEC_video iframe, 
+.VTEC_video object, 
+.VTEC_video embed { 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; }
+
+                  
+/*--style header--*/
+
+header{
+    text-align: center;
+    position: relative;
+    
+}
+
+p{
+  text-indent: 5%;
+}
+h2{
+    text-align: center;
+    line-height: 125%;
+    font-size: 120%;
+    text-decoration: underline;
+    padding-bottom: 5px;
+    color:#f6f6f6;
+}
+
+/*-----------------Start navigation style-----------------*/
+
+nav{
+    width:100%;
+    margin:1% auto;
+    overflow:hidden;
+}
+nav ul{
+    list-style: none;
+    overflow:hidden;   
+}
+
+nav li a{
+    background: #b5afa5;
+    border-right: 1px solid #2d2b2e;
+    color:#f6f6f6;
+    display:block;
+    float:left;
+    font-size: 120%;
+    font-weight: 600;
+    padding:1%;
+    text-align:center;
+    text-decoration: none;
+    width: 16.65%;
+    /*--This slows the transition between hover over color--*/
+    transition: background 0.5s ease;
+}
+
+/*--------Style the hover and active effect for list items--------*/
+
+nav li a:hover,nav li.active a{
+    background:#6c6c6c;
+    color: #f6f6f6;
+    
+}
+
+
+/*--Note: "last-Child" means the last nav list item--*/
+nav li:last-child a{
+    border:none;
+    
+}
+
+/*--End Navigation style--*/
+
+.banner{
+    width:100%;
+}
+
+/*----------------Style the banner----------------*/
+
+/*--Note: setting the image width to !important
+    not matter what size the banner image will display 100%
+    relative to the width of the web broswer--*/
+
+.banner img{
+    width:100% !important;
+    height:auto;
+       
+}
+
+
+/*-----------------Style the main sections website-----------------*/
+
+                /*--setting the left side text section--*/
+section{
+    float:left;
+    width:60%;
+    padding:2%;
+    
+    /*--1% top and bottom and 0% left and right--*/
+    margin:1% 0;
+    background-color: #b5afa5;
+}
+
+/*--End--*/
+
+        /*--setting the right side text section--*/
+aside{
+    
+    float:right;
+    width:38%;
+    padding:2%;
+    margin: 1% 0;
+    background: #b5afa5;       
+}
+
+/*-----------------Style footer-----------------*/
+footer{
+    float:left;
+    width:100%;
+    padding:2%;
+    margin: 1% 0;
+    background-color:#6c6c6c;
+}
+
+.one-third{
+    float:left;
+    width:31%;
+    padding:1%;
+    
+     /*--0% top and bottom and 1% left and right--*/
+    margin: 0 1%;  
+}
+.social{
+    padding-top: 10px;
+    font-size:20px;
+    font-size-adjust: auto;
+    color:#f6f6f6;
+    float:left;
+}
+#copyright{
+    float:right;
+    font-size:20px;
+    margin-top: 21px;
+    color:#f6f6f6;
+    
+}
+
+                  
+/*-----------------hyperlink-----------------*/
+a:link{
+    color: #f6f6f6; 
+}
+/*--mouse over link--*/
+a:hover {
+    color: #6c6c6c;
+}
+          
+
+/*-----------------Media Queries!! section-----------------*/
+
+@media only screen and (max-width: 1500px){
+    
+    body{
+        font-size:22px;
+    }
+    
+     h2{
+        font-size:24px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    
+    body{
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (max-width: 780px){
+    
+    body{
+        font-size:20px;
+    }
+    
+    h2{
+        font-size:22px;
+    }
+    
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .social{
+        font-size: 15px;
+    }
+    
+    #copyright{
+        font-size:15px;
+        
+    }
+    
+    nav{
+       margin:2% auto;    
+    }
+    
+    footer{
+        max-width:100%;
+        height:auto;
+    }
+    nav li a{
+        width:33.3%;
+        font-size: 90%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        
+        /*--line to seperate the rows--*/
+        border-bottom: 1px solid #2d2b2e;
+    }
+    /*--fix the third nav list items alignnment--*/
+    nav li:nth-child(3) a{
+        border-right:none; 
+    }
+    section{
+        width:100%;
+    }
+    aside{
+        width:100%;
+    }
+    .one-third{
+        width:100%;
+    }
+    h2{
+        font-size:105%;
+    }
+    p{
+        font-size: 95%;
+    }
+}
+
+/*-----------------For mobile devices-----------------*/
+
+@media only screen and (max-width: 580px){
+    
+    body{
+        font-size:18px;
+    }
+    
+    h2{
+        font-size:20px;
+    }
+    
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .social{
+        font-size:12px;
+    }
+    
+    #copyright{
+        float:left;
+        font-size:12px;
+    }
+    
+    nav li a{
+        width:50%;
+        font-size: 82%;
+       
+    }
+    
+/*---------fix the third nav list items alignnment---------*/
+    nav li:nth-child(even) a{
+        border-right:none; 
+    }
+    nav li:nth-child(3) a{
+        border-right:1px solid #2d2b2e; 
+    }
+    h2{
+        font-size:95%;
+    }
+    p{
+        font-size: 88%;
+    }
+                            
+/*-----------------End main section styling-----------------*/
